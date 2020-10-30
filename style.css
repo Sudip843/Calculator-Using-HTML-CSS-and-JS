@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(back.jpg);
+}
+.calc-body{
+    border-radius: 25px;
+    background-color: #ecf0f3;
+
+    height: 75vh;
+    width: 25vw;
+    margin-top: 100px;
+    margin-left: 555px;
+}
+.title{
+    margin-left: 25px;
+
+    font-size: 25px;
+    color: black;
+}
+table{
+    margin-top: 100px;
+    margin-left: 5px;
+}
+input{
+	 box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
+	outline: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 45px;
+    width: 20vw;
+    margin-top: 40px;
+    position: fixed;
+    margin-left: 35px;
+    border-radius: 20px;
+	border: none;
+
+}
+button{
+	box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #fff;
+    /*background-color: white;*/
+    color: black;
+    outline: none;
+	border: none;
+    border-radius: 25%;
+    height: 60px;
+    width: 70px;
+    font-size: 30px;
+    margin: 10px;
+}

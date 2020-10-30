@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(back.jpg);
+}
+.calc-body{
+    border-radius: 25px;
+    background-color: #ecf0f3;
+
+    height: 75vh;
+    width: 25vw;
+    margin-top: 100px;
+    margin-left: 555px;
+}
+.title{
+    margin-left: 25px;
+
+    font-size: 25px;
+    color: black;
+}
+table{
+    margin-top: 100px;
+    margin-left: 5px;
+}
+input{
+	 box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
+	outline: none;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 45px;
+    width: 20vw;
+    margin-top: 40px;
+    position: fixed;
+    margin-left: 35px;
+    border-radius: 20px;
+	border: none;
+
+}
+button{
+	box-shadow: 8px 8px 8px #cbced1,
+                -8px -8px 8px #fff;
+    /*background-color: white;*/
+    color: black;
+    outline: none;
+	border: none;
+    border-radius: 25%;
+    height: 60px;
+    width: 70px;
+    font-size: 30px;
+    margin: 10px;
+}
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calc-body">
+        <div class="title">Calculator By Technical Vandar</div>
+        <div class="input">
+            <input type="text" name="screen" id="screen">
+        </div>
+        <table>
+            <tr>
+                <td><button>(</button></td>
+                <td><button>)</button></td>
+                <td><button>C</button></td>
+                <td><button>/</button></td>
+            </tr>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button>*</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button>+</button></td>
+            </tr>
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button>-</button></td>
+            </tr><tr>
+                <td><button>0</button></td>
+                <td><button>.</button></td>
+                <td><button>%</button></td>
+                <td><button>=</button></td>
+            </tr>
+        </table>
+    </div>
+    
+    
+</body>
+<script>
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('Button text is ', buttonText);
+
+        if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
+        }
+        else if (buttonText == '=') {
+            screen.value = eval(screenValue);
+        }
+        else {
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+
+    })
+}
+
+
+</script>
+<!-- <script src="main.js"></script> -->
+</html>
